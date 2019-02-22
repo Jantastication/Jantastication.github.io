@@ -1,0 +1,576 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:100, 300, 400");
+
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+
+html {
+  font-size: calc(0.6em + 0.5vw);
+  scroll-behavior: smooth;
+}
+body {
+  height: 100%;
+  font-weight: 700;
+  text-align: center;
+}
+
+body {
+  background: #030321;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+svg {
+  display: block;
+  font: 8.5em "Montserrat";
+  width: 960px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+  stroke: #4d163d;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2) {
+  stroke: #840037;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+  stroke: #bd0034;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+  stroke: #bd0034;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+  stroke: #fdb731;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
+
+/* drop {
+  
+} */
+
+div.dropping-texts {
+  display: inline-block;
+  width: 180px;
+  text-align: left;
+  height: 36px;
+  vertical-align: -2px;
+}
+
+.dropping-texts > div {
+  font-size: 0px;
+  opacity: 0;
+  margin-left: -30px;
+  position: absolute;
+  font-weight: 300;
+  box-shadow: 0px 60px 25px -20px rgba(0, 0, 0, 0.5);
+}
+
+.dropping-texts > div:nth-child(1) {
+  animation: roll 5s linear infinite 0s;
+}
+.dropping-texts > div:nth-child(2) {
+  animation: roll 5s linear infinite 1s;
+}
+.dropping-texts > div:nth-child(3) {
+  animation: roll 5s linear infinite 2s;
+}
+.dropping-texts > div:nth-child(4) {
+  animation: roll2 5s linear infinite 3s;
+}
+
+@keyframes roll {
+  0% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  20% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+    transform: rotate(0deg);
+  }
+  27% {
+    font-size: 0px;
+    opacity: 0.5;
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+  100% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes roll2 {
+  0% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  30% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+    transform: rotate(0deg);
+  }
+  37% {
+    font-size: 1500px;
+    opacity: 0;
+    margin-left: -1000px;
+    margin-top: -800px;
+  }
+  100% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes bg {
+  0% {
+    background: #ff0075;
+  }
+  3% {
+    background: #0094ff;
+  }
+  20% {
+    background: #0094ff;
+  }
+  23% {
+    background: #b200ff;
+  }
+  40% {
+    background: #b200ff;
+  }
+  43% {
+    background: #8bc34a;
+  }
+  60% {
+    background: #8bc34a;
+  }
+  63% {
+    background: #f44336;
+  }
+  80% {
+    background: #f44336;
+  }
+  83% {
+    background: #f44336;
+  }
+  100% {
+    background: #f44336;
+  }
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 50px;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: dodgerblue;
+}
+
+h2 {
+  font-weight: 700;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: white;
+}
+h3 {
+  font-weight: 700;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: blue;
+}
+h5 {
+  font-weight: 10;
+  font-size: 28px;
+}
+
+#email {
+  background: navy;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: aqua;
+}
+
+#email:hover {
+  font-weight: 500;
+}
+
+[class^="card-back"] > p {
+  font-size: 0.9em;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.button {
+  width: 2.5em;
+  padding: 0 0.5em 0.06em 0.5em;
+  vertical-align: baseline;
+}
+
+.button-li {
+  width: 2.55em;
+  padding: 0 0.5em 0 0.5em;
+  vertical-align: baseline;
+}
+
+.icon-inline {
+  width: 1.5em;
+  padding: 0 0.8vw 0.2vh 0.8vw;
+  vertical-align: text-bottom;
+}
+
+.icon {
+  width: 1.5em;
+  padding: 0 0.5em 0.1em 0.5em;
+  vertical-align: text-bottom;
+}
+
+.icon-li {
+  width: 1.6em;
+  padding: 0 0.5em 0 0.5em;
+  vertical-align: text-bottom;
+}
+
+.button:hover,
+.button-li:hover,
+.icon:hover,
+.icon-li:hover {
+  transform: scale(1.1);
+  transition: all 0.1s ease;
+}
+
+.pulse {
+  animation: pulse 2.5s infinite;
+  font-size: 5em;
+  font-weight: 700;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    color: rgba(89, 89, 89, 0.5);
+  }
+  50% {
+    color: rgba(89, 89, 89, 0.2);
+  }
+}
+.content {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.content > div {
+  padding: 30vh 0 25vh 0;
+  animation: fade 6s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+.header {
+  height: 100vh;
+  width: 100%;
+  display: table;
+  background-image: linear-gradient(120deg, #ffdee9, #b5fffc);
+  color: #595959;
+}
+
+.me {
+  height: auto;
+  width: 100%;
+  padding: 6vh 0 6vh 0;
+  background-color: #030330;
+  color: white;
+  display: table;
+  font-size: 28px;
+  font-weight: 100;
+  font-family: "Roboto, Monospace";
+  /* font-family: "Great Vibes"; */
+}
+
+.me > div {
+  padding: 0 4vw 0 4vw;
+}
+
+.portfolio {
+  height: auto;
+  padding: 6vh 6vw 8vh 6vw;
+  background-color: #262626;
+}
+
+.portfolio-card {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 4vh;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: black;
+  /* box-shadow: 2px 2px 5px 2px lightgray; */
+}
+
+[class^="card-back"] {
+  display: none;
+  padding: 2vh 6vw 2vh 6vw;
+}
+
+.card-front-planner:hover .card-back-planner {
+  display: block;
+  animation: fade 2s;
+}
+
+.card-front-dd:hover .card-back-dd {
+  display: block;
+  animation: fade 2s;
+}
+
+.card-front-hh:hover .card-back-hh {
+  display: block;
+  animation: fade 2s;
+}
+
+.footer {
+  height: auto;
+  padding: 3vh 0 1vh 0;
+  /* background-image: linear-gradient(120deg, #ffdee9, #b5fffc); */
+  background-color: #030321;
+  /* background-color: #030321; */
+  font-size: 0.8em;
+  color: magenta;
+}
+
+/* html {
+  font-size: calc(1em + 0.5vw);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  margin: 0px;
+  padding-top: 35vh;
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 36px;
+  font-weight: 100;
+  overflow: hidden;
+  animation: bg 5s linear infinite;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+.dropping-texts {
+  display: inline-block;
+  width: 180px;
+  text-align: left;
+  height: 36px;
+  vertical-align: -2px;
+}
+
+.dropping-texts > div {
+  font-size: 0px;
+  opacity: 0;
+  margin-left: -30px;
+  position: absolute;
+  font-weight: 300;
+  box-shadow: 0px 60px 25px -20px rgba(0, 0, 0, 0.5);
+}
+
+.dropping-texts > div:nth-child(1) {
+  animation: roll 5s linear infinite 0s;
+}
+.dropping-texts > div:nth-child(2) {
+  animation: roll 5s linear infinite 1s;
+}
+.dropping-texts > div:nth-child(3) {
+  animation: roll 5s linear infinite 2s;
+}
+.dropping-texts > div:nth-child(4) {
+  animation: roll2 5s linear infinite 3s;
+}
+
+@keyframes roll {
+  0% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  20% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+    transform: rotate(0deg);
+  }
+  27% {
+    font-size: 0px;
+    opacity: 0.5;
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+  100% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes roll2 {
+  0% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  30% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+    transform: rotate(0deg);
+  }
+  37% {
+    font-size: 1500px;
+    opacity: 0;
+    margin-left: -1000px;
+    margin-top: -800px;
+  }
+  100% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes bg {
+  0% {
+    background: #ff0075;
+  }
+  3% {
+    background: #0094ff;
+  }
+  20% {
+    background: #0094ff;
+  }
+  23% {
+    background: #b200ff;
+  }
+  40% {
+    background: #b200ff;
+  }
+  43% {
+    background: #8bc34a;
+  }
+  60% {
+    background: #8bc34a;
+  }
+  63% {
+    background: #f44336;
+  }
+  80% {
+    background: #f44336;
+  }
+  83% {
+    background: #f44336;
+  }
+  100% {
+    background: #f44336;
+  }
+} */
