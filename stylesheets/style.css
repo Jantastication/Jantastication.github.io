@@ -9,67 +9,34 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  height: 100%;
+  height: 100vh;
   font-weight: 700;
   text-align: center;
-}
-
-body {
   background: #030321;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-svg {
-  display: block;
-  font: 8.5em "Montserrat";
-  width: 960px;
-  height: 300px;
-  margin: 0 auto;
+#video-background {
+  /*  making the video fullscreen  */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
 }
 
-.text-copy {
-  fill: none;
-  stroke: white;
-  stroke-dasharray: 6% 29%;
-  stroke-width: 5px;
-  stroke-dashoffset: 0%;
-  animation: stroke-offset 5.5s infinite linear;
+.video-background:after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
 }
-
-.text-copy:nth-child(1) {
-  stroke: #4d163d;
-  animation-delay: -1;
-}
-
-.text-copy:nth-child(2) {
-  stroke: #840037;
-  animation-delay: -2s;
-}
-
-.text-copy:nth-child(3) {
-  stroke: #bd0034;
-  animation-delay: -3s;
-}
-
-.text-copy:nth-child(4) {
-  stroke: #bd0034;
-  animation-delay: -4s;
-}
-
-.text-copy:nth-child(5) {
-  stroke: #fdb731;
-  animation-delay: -5s;
-}
-
-@keyframes stroke-offset {
-  100% {
-    stroke-dashoffset: -35%;
-  }
-}
-
-/* drop {
-  
-} */
 
 div.dropping-texts {
   display: inline-block;
@@ -218,22 +185,25 @@ div.dropping-texts {
 }
 
 h1 {
-  font-weight: 800;
-  font-size: 50px;
-  background: black;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: dodgerblue;
+  font-weight: 100;
+  font-size: 80px;
+  font-family: "Great Vibes";
+  /* background: black; */
+  /* -webkit-background-clip: text;*/
+  -webkit-text-fill-color: white;
 }
 
 h2 {
-  font-weight: 700;
-  background: black;
+  font-weight: 100;
+  /* background: black; */
+  font-family: "Great Vibes";
   -webkit-background-clip: text;
-  -webkit-text-fill-color: white;
+  -webkit-text-fill-color: yellow;
 }
 h3 {
-  font-weight: 700;
-  background: black;
+  font-weight: 100;
+  font-size: 60px;
+  /* background: black; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: blue;
 }
@@ -334,19 +304,95 @@ a {
   }
 }
 
-.header {
+/* .header {
   height: 100vh;
   width: 100%;
   display: table;
   background-image: linear-gradient(120deg, #ffdee9, #b5fffc);
   color: #595959;
+} */
+
+.header {
+  /* background-color: rgba(85, 202, 249, 1); */
+  height: 100vh;
+  width: 100%;
+  padding: 10%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-text {
+  margin: 1em 0 0.2em 0;
+  max-width: 80%;
+}
+.header-title {
+  font-size: 4em;
+  font-family: "Lato", sans-serif;
+  color: yellow;
+}
+.header-subtitle {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  margin: 5% 0 15% 0;
+  color: white;
+}
+.header-learnmore {
+  margin-top: 8%;
+  margin-bottom: 5%;
+  display: inline-block;
+  opacity: 0.7;
+
+  cursor: pointer;
+  cursor: hand;
+}
+.chevron-down {
+  color: white;
+}
+.color-white {
+  color: white;
+}
+
+@media (min-width: 375px) {
+  .header-title {
+    font-size: 2.5em;
+  }
+  .header-subtitle {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 650px) {
+  .header-title {
+    font-size: 3.2em;
+  }
+  .header-subtitle {
+    font-size: 1.9em;
+  }
+  .header-learnmore {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 950px) {
+  .header-title {
+    font-size: 3.2em;
+  }
+  .header-subtitle {
+    font-size: 1.9em;
+    margin: 2% 0 6% 0;
+  }
+  .header-learnmore {
+    font-size: 1.2em;
+  }
 }
 
 .me {
   height: auto;
   width: 100%;
   padding: 6vh 0 6vh 0;
-  background-color: #030330;
+  /* background-color: #030330; */
   color: white;
   display: table;
   font-size: 28px;
@@ -361,8 +407,9 @@ a {
 
 .portfolio {
   height: auto;
-  padding: 6vh 6vw 8vh 6vw;
-  background-color: #262626;
+  /* padding: 6vh 6vw 8vh 6vw; */
+  padding: 0vh 0vw 0vh 0vw;
+  /* background-color: #262626; */
 }
 
 .portfolio-card {
@@ -373,7 +420,6 @@ a {
   border-style: solid;
   border-radius: 4px;
   border-color: black;
-  /* box-shadow: 2px 2px 5px 2px lightgray; */
 }
 
 [class^="card-back"] {
@@ -398,12 +444,14 @@ a {
 
 .footer {
   height: auto;
-  padding: 3vh 0 1vh 0;
-  /* background-image: linear-gradient(120deg, #ffdee9, #b5fffc); */
+  padding-top: 1em;
+  padding-bottom: 0.5em;
   background-color: #030321;
-  /* background-color: #030321; */
+
   font-size: 0.8em;
   color: magenta;
+  /* padding: 2vh 0 1vh 0; */
+  /* background-image: linear-gradient(120deg, #ffdee9, #b5fffc); */
 }
 
 /* html {
