@@ -203,6 +203,7 @@ h2 {
 h3 {
   font-weight: 100;
   font-size: 60px;
+  font-family: "Open Sans", sans-serif;
   /* background: black; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: blue;
@@ -312,8 +313,7 @@ a {
   color: #595959;
 } */
 
-.header {
-  /* background-color: rgba(85, 202, 249, 1); */
+/* .header {
   height: 100vh;
   width: 100%;
   padding: 10%;
@@ -322,8 +322,9 @@ a {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-}
-.header-text {
+} */
+
+/* .header-text {
   margin: 1em 0 0.2em 0;
   max-width: 80%;
 }
@@ -352,9 +353,9 @@ a {
 }
 .color-white {
   color: white;
-}
+} */
 
-@media (min-width: 375px) {
+/* @media (min-width: 375px) {
   .header-title {
     font-size: 2.5em;
   }
@@ -386,7 +387,7 @@ a {
   .header-learnmore {
     font-size: 1.2em;
   }
-}
+} */
 
 .me {
   height: auto;
@@ -397,7 +398,7 @@ a {
   display: table;
   font-size: 28px;
   font-weight: 100;
-  font-family: "Roboto, Monospace";
+  font-family: "Open Sans', sans-serif";
   /* font-family: "Great Vibes"; */
 }
 
