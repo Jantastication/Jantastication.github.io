@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans-sans-serif);
 
-@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+/* @import url(https://fonts.googleapis.com/css?family=Great+Vibes); */
 
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
@@ -44,9 +44,9 @@ h1 {
   font-weight: 100;
   font-size: 7em;
   font-family: "Lato";
-  color: #ffffff;
+  /* color: #ffffff; */
   margin-bottom: 0;
-  /* -webkit-text-fill-color: #e7dfdd; */
+  -webkit-text-fill-color: #ffffff;
 }
 
 h2 {
