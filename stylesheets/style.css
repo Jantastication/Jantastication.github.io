@@ -84,8 +84,18 @@ p.big {
 
 a {
   text-decoration: none;
-  color: white;
+  color: #cc0000;
 }
+a:link {
+  color: #cc0000;
+}
+
+a:hover {
+  color: yellow;
+}
+/* a:visited {
+  color: magenta;
+} */
 
 .icon-inline {
   width: 1.5em;
